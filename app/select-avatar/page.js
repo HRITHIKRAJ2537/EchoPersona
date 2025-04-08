@@ -1,6 +1,9 @@
-// pages/select-avatar.js
+// app/select-avatar/page.js
+'use client';
+import '@/app/globals.css';
+
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -13,7 +16,7 @@ export default function SelectAvatar() {
         // Get the text from localStorage
         const text = localStorage.getItem('synthesisText');
         if (!text) {
-            router.push('/');
+            router.push('/Home');
         } else {
             setInputText(text);
         }
@@ -21,7 +24,7 @@ export default function SelectAvatar() {
 
     // Sample avatar data - in a real app, these would come from your API
     const avatars = [
-        { id: 1, name: 'Emma', imageUrl: '/api/placeholder/120/150', gender: 'female' },
+        { id: 1, name: 'Emma', imageUrl: 'img.png', gender: 'female' },
         { id: 2, name: 'Michael', imageUrl: '/api/placeholder/120/150', gender: 'male' },
         { id: 3, name: 'Sofia', imageUrl: '/api/placeholder/120/150', gender: 'female' },
         { id: 4, name: 'James', imageUrl: '/api/placeholder/120/150', gender: 'male' },
@@ -37,7 +40,7 @@ export default function SelectAvatar() {
     };
 
     const handleBack = () => {
-        router.push('/');
+        router.push('/Home');
     };
 
     // Avatar container animation

@@ -1,9 +1,16 @@
-// pages/index.js
+// app/Home/page.js
+'use client';
+import '@/app/globals.css';
+
+
+
+
+
 import { useState } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-import Sidebar from '../components/Sidebar';
-import TextInput from '../components/TextInput';
+import Sidebar from '../../components/Sidebar';
+import TextInput from '../../components/TextInput';
 
 export default function HomePage() {
     const [inputText, setInputText] = useState('');
