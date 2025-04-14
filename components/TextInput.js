@@ -16,7 +16,7 @@ export default function TextInput({ value, onChange, onSubmit, placeholder }) {
     const [templatePreview, setTemplatePreview] = useState(null);
     const textareaRef = useRef(null);
     const typingTimeoutRef = useRef(null);
-    const apiBaseUrl = 'https://7a22-3-86-154-143.ngrok-free.app';
+    const apiBaseUrl = 'https://9317-54-91-183-92.ngrok-free.app';
 
     // Update character and word count
     useEffect(() => {
